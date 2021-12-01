@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1856909198743121682}
   m_Layer: 0
   m_Name: Capsule (2)
-  m_TagString: Untagged
+  m_TagString: Coins
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 4581786516647692434}
   m_Layer: 0
   m_Name: Capsule (1)
-  m_TagString: Untagged
+  m_TagString: Coins
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 744408389111070043}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Coins
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,9 +255,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2596341188450184957}
+  - component: {fileID: 2765954556989206583}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Coins
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279,3 +280,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2765954556989206583
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9014369935989732443}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
