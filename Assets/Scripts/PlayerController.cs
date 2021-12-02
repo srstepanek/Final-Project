@@ -29,6 +29,11 @@ public class PlayerController : MonoBehaviour
     {
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            LevelManager.instance.Restart();
+        }
     }
 
     void FixedUpdate()
@@ -50,6 +55,20 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Platform")
         {
             isJumping = false;
+        }
+        Debug.Log("Hit");
+        //Pick Ups
+        if (collision.gameObject.tag == "Coins")
+        {
+            Debug.Log("Coin");
+            LevelManager.instance.UpdateScore(1);
+            LevelManager.instance.RemoveObject("Coin", collision.transform.position);
+            Destroy(collision);
+        }
+        if (collision.gameObject.tag == "TimePickUp")
+        {
+            LevelManager.instance.RemoveObject("Coin", collision.transform.position);
+            Destroy(collision);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

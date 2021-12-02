@@ -3,6 +3,7 @@
     
         Worked on Chracter Design - 1 hour 30 minutes
         Added Time Script - 1 hour 15 minutes
+        Cleaned up ALL scripts - 1 hour 
 
-    Total Time: 2 hours 45 minutes
+        Total Time: 3 hours 45 minutes
  */

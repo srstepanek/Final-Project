@@ -6,9 +6,8 @@ using UnityEngine.UI;
 
 public class TimeScript : MonoBehaviour
 {
-    public TextMeshProUGUI timerText;
     float timeSinceStart;
-    public int timeLimit;
+    const int timeLimit = 3;
 
     void Start()
     {
@@ -20,21 +19,20 @@ public class TimeScript : MonoBehaviour
     //Update Time
         timeSinceStart += Time.deltaTime;
         int timeRemaining = (int) Mathf.Ceil(timeLimit - timeSinceStart);
-        timerText.text = "Time: " + timeRemaining.ToString();
-
-    //Check if out of time
-        if(timeRemaining <= 0)
+        LevelManager.instance.UpdateTime(timeRemaining);
+     
+        //Check if out of time
+        if (timeRemaining <= 0) //End Game
         {
             //Activate Death Animation
             //Pull Up Menu
             //Reset Objects
-
-            timerText.text = "Time: 0";
+            LevelManager.instance.UpdateTime(0);
         }
     }
 
     public void addTime(int t) {
-        timeLimit += t;
+        timeSinceStart += t;
     }
 
     public void Restart() {
