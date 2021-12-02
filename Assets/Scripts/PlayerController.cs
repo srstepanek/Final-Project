@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
 
         moveSpeed = 1f;
-        jumpForce = 60f;
+        jumpForce = 20f;
         isJumping = false;
     }
 
