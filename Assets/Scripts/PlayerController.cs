@@ -56,19 +56,17 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = false;
         }
-        Debug.Log("Hit");
+
         //Pick Ups
         if (collision.gameObject.tag == "Coins")
         {
-            Debug.Log("Coin");
             LevelManager.instance.UpdateScore(1);
-            LevelManager.instance.RemoveObject("Coin", collision.transform.position);
-            Destroy(collision);
+            LevelManager.instance.RemoveObject("Coin", collision.gameObject);
         }
         if (collision.gameObject.tag == "TimePickUp")
         {
-            LevelManager.instance.RemoveObject("Coin", collision.transform.position);
-            Destroy(collision);
+           // LevelManager.instance.RemoveObject("TimePickUp", collision.transform.position);
+            //Destroy(collision);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

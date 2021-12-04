@@ -4,6 +4,11 @@
         Worked on Chracter Design - 1 hour 30 minutes
         Added Time Script - 1 hour 15 minutes
         Cleaned up ALL scripts - 1 hour 
+        Messed with Level Editor - 1 hour
+        Added Coin Pick Up and Reset - 1 Hour
+        Added Upgrade Menu on Restart - 15 minutes
+        Started Upgrade Scripts - 30 minutes
 
-        Total Time: 3 hours 45 minutes
+
+        Total Time: 6.5 hours
  */

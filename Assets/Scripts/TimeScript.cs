@@ -8,6 +8,7 @@ public class TimeScript : MonoBehaviour
 {
     float timeSinceStart;
     const int timeLimit = 3;
+    bool game = true;
 
     void Start()
     {
@@ -16,18 +17,19 @@ public class TimeScript : MonoBehaviour
 
     void Update()
     {
-    //Update Time
-        timeSinceStart += Time.deltaTime;
-        int timeRemaining = (int) Mathf.Ceil(timeLimit - timeSinceStart);
-        LevelManager.instance.UpdateTime(timeRemaining);
-     
-        //Check if out of time
-        if (timeRemaining <= 0) //End Game
-        {
-            //Activate Death Animation
-            //Pull Up Menu
-            //Reset Objects
-            LevelManager.instance.UpdateTime(0);
+        if (game) {
+            //Update Time
+            timeSinceStart += Time.deltaTime;
+            int timeRemaining = (int)Mathf.Ceil(timeLimit - timeSinceStart);
+            LevelManager.instance.UpdateTime(timeRemaining);
+
+            //Check if out of time
+            if (timeRemaining <= 0) //End Game
+            {
+                LevelManager.instance.Restart();
+                LevelManager.instance.UpdateTime(0);
+                game = false;
+            }
         }
     }
 

@@ -6,6 +6,8 @@ using TMPro;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
+
+    public TextMeshProUGUI upgradeMenu;
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI timeText;
     public TimeScript ts;
@@ -13,9 +15,12 @@ public class LevelManager : MonoBehaviour
     public GameObject prefab_TimePickUp;
     public GameObject prefab_Coin;
 
+    public Camera mainCam;
+    public Camera upCam;
+
     int score;
-    List<Vector2> resetQue_Loc;
-    List<string> resetQue_Type;
+    List<GameObject> resetQue_Obj = new List<GameObject>();
+    List<string> resetQue_Type = new List<string>();
     int listLength = 0;
 
     // Start is called before the first frame update
@@ -24,6 +29,14 @@ public class LevelManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Restart();
         }
     }
     public void UpdateScore(int coinValue)
@@ -42,28 +55,43 @@ public class LevelManager : MonoBehaviour
         ts.addTime(time);
     }
 
-    public void RemoveObject(string type, Vector2 loc)
+    public void RemoveObject(string type, GameObject obj)
     {
+    //Add to ListS
+        if (type == "Coin")
+        {
+            obj.GetComponent<CircleCollider2D>().enabled = false;
+            for (int i = 0; i < 3; i++)
+                obj.transform.GetChild(i).GetComponent<SpriteRenderer>().enabled = false;
+        }
+
+    //Update List
         resetQue_Type.Add(type);
-        resetQue_Loc.Add(loc);
+        resetQue_Obj.Add(obj);
         listLength++;
     }
 
     public void Restart()
     {
-        for (int i =0; i < listLength; i++) {
-            GameObject obj;
-            if (resetQue_Type[i] == "Coin") {
-                obj = GameObject.Instantiate(prefab_Coin);
-            }
-            else if (resetQue_Type[i] == "TimePowerUp")
-            {
-                obj = GameObject.Instantiate(prefab_TimePickUp);
-            }
-            else
-                obj = new GameObject();
+        //Switch Camera
+             mainCam.enabled = false;
+             upCam.enabled = true;
 
-            obj.transform.position = resetQue_Loc[i];
-        }
+        //Replace Items
+            for (int i = 0; i < listLength; i++) {
+                GameObject obj = resetQue_Obj[i];
+
+                if (resetQue_Type[i] == "Coin") {
+                    obj.GetComponent<CircleCollider2D>().enabled = true;
+                    for (int j = 0; j < 3; j++)
+                        obj.transform.GetChild(j).GetComponent<SpriteRenderer>().enabled = true;
+                }
+                else if (resetQue_Type[i] == "TimePowerUp")
+                {
+                    obj = GameObject.Instantiate(prefab_TimePickUp);
+                }
+            }
+
+    //Pull Up Upgrade Menu
     }
 }
