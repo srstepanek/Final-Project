@@ -1,8 +1,8 @@
 /*
     Sam's Log
     
-        Work1 - #h
-        Work2 - #h
+        Main Menu- 1h
+        Upgrade Menu - 2h
 
     Total Time: #h
  */
