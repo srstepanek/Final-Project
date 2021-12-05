@@ -41,8 +41,8 @@ public class LevelManager : MonoBehaviour
     }
     public void UpdateScore(int coinValue)
     {
-        score += coinValue;
-        coinText.text = "X" + score.ToString();
+        /*score += coinValue;
+        coinText.text = "X" + score.ToString();*/
     }
 
     public void UpdateTime(int time)
