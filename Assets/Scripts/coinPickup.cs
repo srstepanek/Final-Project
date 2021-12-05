@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class coinPickup : MonoBehaviour
 {
     //Keep track of total picked coins (Since the value is static, it can be accessed at "SC_2DCoin.totalCoins" from any script)
     public static int totalCoins = 0;
+    public Text coinText;
 
     void Awake()
     {
@@ -24,6 +26,9 @@ public class coinPickup : MonoBehaviour
             Debug.Log("You currently have " + coinPickup.totalCoins + " Coins.");
             //Destroy coin
             Destroy(gameObject);
+            //Updates Coin Text in top left
+            coinText.text = totalCoins.ToString("0");
+
         }
     }
 }
