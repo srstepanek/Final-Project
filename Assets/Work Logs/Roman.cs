@@ -8,7 +8,8 @@
         Added Coin Pick Up and Reset - 1 Hour
         Added Upgrade Menu on Restart - 15 minutes
         Started Upgrade Scripts - 30 minutes
+        Update Uprade Menu Layout - 30 minutes
 
 
-        Total Time: 6.5 hours
+        Total Time: 7 hours
  */
