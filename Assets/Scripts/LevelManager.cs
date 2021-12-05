@@ -6,7 +6,7 @@ using TMPro;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
-
+ 
     public TextMeshProUGUI upgradeMenu;
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI timeText;
@@ -18,7 +18,10 @@ public class LevelManager : MonoBehaviour
     public Camera mainCam;
     public Camera upCam;
 
+    public PlayerController pc;
+
     int score;
+
     List<GameObject> resetQue_Obj = new List<GameObject>();
     List<string> resetQue_Type = new List<string>();
     int listLength = 0;
@@ -41,8 +44,8 @@ public class LevelManager : MonoBehaviour
     }
     public void UpdateScore(int coinValue)
     {
-        /*score += coinValue;
-        coinText.text = "X" + score.ToString();*/
+        score += coinValue;
+        coinText.text = "Coins: " + score.ToString();
     }
 
     public void UpdateTime(int time)
@@ -92,6 +95,19 @@ public class LevelManager : MonoBehaviour
                 }
             }
 
-    //Pull Up Upgrade Menu
+        //Player Postition Reset
+            pc.Restart();
+    }
+
+    public void Play() {
+    //Switch Camera
+        mainCam.enabled = true;
+        upCam.enabled = false;
+
+    //Restart Time
+        ts.startTime();
+
+        //Allow Player Movement
+        pc.Play();
     }
 }

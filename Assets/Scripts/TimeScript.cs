@@ -40,4 +40,10 @@ public class TimeScript : MonoBehaviour
     public void Restart() {
         timeSinceStart = 0;
     }
+
+    public void startTime()
+    {
+        timeSinceStart = 0;
+        game = true;
+    }
 }

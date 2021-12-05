@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     private bool isJumping;
     private float moveHorizontal;
     private float moveVertical;
+    private Vector3 startPos;
+
+    bool isActive = true;
 
 
     // Start is called before the first frame update
@@ -22,31 +25,40 @@ public class PlayerController : MonoBehaviour
         moveSpeed = 1f;
         jumpForce = 20f;
         isJumping = false;
+
+        startPos = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        moveHorizontal = Input.GetAxisRaw("Horizontal");
-        moveVertical = Input.GetAxisRaw("Vertical");
+        if (isActive) {
+            moveHorizontal = Input.GetAxisRaw("Horizontal");
+            moveVertical = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            LevelManager.instance.Restart();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                LevelManager.instance.Restart();
+            }
         }
     }
 
     void FixedUpdate()
     {
-        if (moveHorizontal > 0.1f || moveHorizontal < -0.1f)
+        if (isActive)
         {
-            rb2D.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
-        }
+            if (moveHorizontal > 0.1f || moveHorizontal < -0.1f)
+            {
+                rb2D.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
+            }
 
-        if (!isJumping && moveVertical > 0.1f)
-        {
-            rb2D.AddForce(new Vector2(0f, moveVertical * moveSpeed), ForceMode2D.Impulse);
+            if (!isJumping && moveVertical > 0.1f)
+            {
+                rb2D.AddForce(new Vector2(0f, moveVertical * moveSpeed), ForceMode2D.Impulse);
+            }
         }
+        else
+            rb2D.velocity = Vector2.zero;
 
     }
 
@@ -72,5 +84,16 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         isJumping = true;
+    }
+
+    public void Play()
+    {
+        isActive = true;
+    }
+
+    public void Restart()
+    {
+        transform.position = startPos;
+        isActive = false;
     }
 }

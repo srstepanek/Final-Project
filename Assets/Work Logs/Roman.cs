@@ -9,6 +9,7 @@
         Added Upgrade Menu on Restart - 15 minutes
         Started Upgrade Scripts - 30 minutes
         Update Uprade Menu Layout - 30 minutes
+        Added Working Play Button in Upgrade Menu - 1 hour
 
 
         Total Time: 7 hours
