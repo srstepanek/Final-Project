@@ -2000,8 +2000,6 @@ MonoBehaviour:
   upgradeCoinText: {fileID: 1474565326}
   timeText: {fileID: 539952575}
   ts: {fileID: 519322922}
-  prefab_TimePickUp: {fileID: 9014369935989732443, guid: dca3af6ce60c01e4a9210ffaf7544317, type: 3}
-  prefab_Coin: {fileID: 9014369935989732443, guid: dca3af6ce60c01e4a9210ffaf7544317, type: 3}
   mainCam: {fileID: 1752292299}
   upCam: {fileID: 1592921176}
   pc: {fileID: 1646559200}
@@ -7631,7 +7629,7 @@ GameObject:
   - component: {fileID: 1988328632}
   - component: {fileID: 1988328631}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: GUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

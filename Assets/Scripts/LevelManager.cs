@@ -11,9 +11,6 @@ public class LevelManager : MonoBehaviour
     public TextMeshProUGUI timeText;
     public TimeScript ts;
 
-    public GameObject prefab_TimePickUp;
-    public GameObject prefab_Coin;
-
     public Camera mainCam;
     public Camera upCam;
 
@@ -91,7 +88,7 @@ public class LevelManager : MonoBehaviour
                 }
                 else if (resetQue_Type[i] == "TimePowerUp")
                 {
-                    obj = GameObject.Instantiate(prefab_TimePickUp);
+                    
                 }
             }
 

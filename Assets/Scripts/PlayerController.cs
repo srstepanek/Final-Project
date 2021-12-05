@@ -4,68 +4,54 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D rb2D;
-
-    private float moveSpeed;
-    private float jumpForce;
-    private bool isJumping;
-    private float moveHorizontal;
-    private float moveVertical;
     private Vector3 startPos;
 
     bool isActive = true;
+
+    private Rigidbody2D body;
+    [SerializeField] public float speed;
+    [SerializeField] public float jump;
+    private bool grounded;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        rb2D = gameObject.GetComponent<Rigidbody2D>();
+        body = gameObject.GetComponent<Rigidbody2D>();
 
-
+        
         UpdateMoveSpeeds();
-        isJumping = false;
+        grounded = false;
 
         startPos = transform.position;
+
+        body = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (isActive) {
-            moveHorizontal = Input.GetAxisRaw("Horizontal");
-            moveVertical = Input.GetAxisRaw("Vertical");
+            float horizontalInput = Input.GetAxis("Horizontal");
+            body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+
+            if (Input.GetKey(KeyCode.Space) && grounded == true)
+                Jump();
 
             if (Input.GetKeyDown(KeyCode.R))
             {
                 LevelManager.instance.Restart();
             }
         }
-    }
-
-    void FixedUpdate()
-    {
-        if (isActive)
-        {
-            if (moveHorizontal > 0.1f || moveHorizontal < -0.1f)
-            {
-                rb2D.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
-            }
-
-            if (!isJumping && moveVertical > 0.1f)
-            {
-                rb2D.AddForce(new Vector2(0f, moveVertical * moveSpeed), ForceMode2D.Impulse);
-            }
-        }
         else
-            rb2D.velocity = Vector2.zero;
-
+            body.velocity = Vector2.zero;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Platform")
         {
-            isJumping = false;
+            grounded = true;
         }
 
         //Pick Ups
@@ -80,13 +66,16 @@ public class PlayerController : MonoBehaviour
             //Destroy(collision);
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+
+    private void Jump()
     {
-        isJumping = true;
+        body.velocity = new Vector2(body.velocity.x, jump);
+        grounded = false;
     }
 
     public void Play()
     {
+        UpdateMoveSpeeds();
         isActive = true;
     }
 
@@ -94,12 +83,11 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = startPos;
         isActive = false;
-        UpdateMoveSpeeds();
     }
 
     void UpdateMoveSpeeds()
     {
-        moveSpeed = UpgradeMenuScript.instance.getMod("Speed");
-        jumpForce = UpgradeMenuScript.instance.getMod("Jump");
+        speed = UpgradeMenuScript.instance.getMod("Speed");
+        jump = UpgradeMenuScript.instance.getMod("Jump");
     }
 }
