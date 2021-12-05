@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class UpgradeTemplate
 {
@@ -9,30 +7,40 @@ public class UpgradeTemplate
     int cost = 1;
     double maxModifer;
 
-    TextMeshProUGUI costGUI;
-    TextMeshProUGUI levelGUI;
+    Text costGUI;
+    Text levelGUI;
 
-    UpgradeTemplate(int cost, int maxMod, TextMeshProUGUI costGUI, TextMeshProUGUI levelGUI)
+    public UpgradeTemplate(int cost, float maxMod, Text costGUI, Text levelGUI)
     {
         this.cost = cost;
         maxModifer = maxMod;
         this.costGUI = costGUI;
         this.levelGUI = levelGUI;
+
+        UpdateText();
+    }
+
+    public void UpdateText()
+    {
+        costGUI.text = "COST: " + cost.ToString();
+        levelGUI.text = "LEVEL: " + currentLevel.ToString() + "/" + maxLevel.ToString();
     }
 
     public void upgrade(int coins) { 
-        if (coins >= cost) {
+        if (coins >= cost && currentLevel + 1 <= maxLevel) {
         //Update Level, coins, and cost
             currentLevel++;
-            LevelManager.instance.UpdateScore(-coins);
+            LevelManager.instance.UpdateScore(-cost);
             cost = cost * 2;
 
         //Update Gui
             costGUI.text = "COST: " + cost.ToString();
+
+            UpdateText();
         }
     }
 
-    public double getModifer() {
-        return (maxModifer / maxLevel) * currentLevel;
+    public float getModifer() {
+        return (float)((maxModifer / maxLevel) * currentLevel);
     }
 }

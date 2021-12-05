@@ -22,8 +22,7 @@ public class PlayerController : MonoBehaviour
         rb2D = gameObject.GetComponent<Rigidbody2D>();
 
 
-        moveSpeed = 1f;
-        jumpForce = 20f;
+        UpdateMoveSpeeds();
         isJumping = false;
 
         startPos = transform.position;
@@ -72,7 +71,7 @@ public class PlayerController : MonoBehaviour
         //Pick Ups
         if (collision.gameObject.tag == "Coins")
         {
-            LevelManager.instance.UpdateScore(1);
+            LevelManager.instance.UpdateScore(1 * (int)UpgradeMenuScript.instance.getMod("CoinMod"));
             LevelManager.instance.RemoveObject("Coin", collision.gameObject);
         }
         if (collision.gameObject.tag == "TimePickUp")
@@ -95,5 +94,12 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = startPos;
         isActive = false;
+        UpdateMoveSpeeds();
+    }
+
+    void UpdateMoveSpeeds()
+    {
+        moveSpeed = UpgradeMenuScript.instance.getMod("Speed");
+        jumpForce = UpgradeMenuScript.instance.getMod("Jump");
     }
 }

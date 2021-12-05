@@ -7,8 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
  
-    public TextMeshProUGUI upgradeMenu;
-    public TextMeshProUGUI coinText;
+    public TextMeshProUGUI coinText, upgradeCoinText;
     public TextMeshProUGUI timeText;
     public TimeScript ts;
 
@@ -46,6 +45,7 @@ public class LevelManager : MonoBehaviour
     {
         score += coinValue;
         coinText.text = "Coins: " + score.ToString();
+        upgradeCoinText.text = "Coins: " + score.ToString();
     }
 
     public void UpdateTime(int time)
@@ -107,7 +107,12 @@ public class LevelManager : MonoBehaviour
     //Restart Time
         ts.startTime();
 
-        //Allow Player Movement
+    //Allow Player Movement
         pc.Play();
+    }
+
+    public int getCoins()
+    {
+        return score;
     }
 }
