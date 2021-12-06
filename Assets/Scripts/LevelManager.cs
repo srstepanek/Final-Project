@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
@@ -106,6 +106,12 @@ public class LevelManager : MonoBehaviour
 
     //Allow Player Movement
         pc.Play();
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
     }
 
     public int getCoins()
