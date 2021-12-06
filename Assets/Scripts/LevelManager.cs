@@ -64,8 +64,14 @@ public class LevelManager : MonoBehaviour
             for (int i = 0; i < 3; i++)
                 obj.transform.GetChild(i).GetComponent<SpriteRenderer>().enabled = false;
         }
+        else if (type == "Time")
+        {
+            obj.GetComponent<CircleCollider2D>().enabled = false;
+            for (int i = 0; i < 5; i++)
+                obj.transform.GetChild(i).GetComponent<SpriteRenderer>().enabled = false;
+        }
 
-    //Update List
+        //Update List
         resetQue_Type.Add(type);
         resetQue_Obj.Add(obj);
         listLength++;
@@ -77,6 +83,9 @@ public class LevelManager : MonoBehaviour
              mainCam.enabled = false;
              upCam.enabled = true;
 
+        //Player Postition Reset
+            pc.Restart();
+
         //Replace Items
             for (int i = 0; i < listLength; i++) {
                 GameObject obj = resetQue_Obj[i];
@@ -86,14 +95,13 @@ public class LevelManager : MonoBehaviour
                     for (int j = 0; j < 3; j++)
                         obj.transform.GetChild(j).GetComponent<SpriteRenderer>().enabled = true;
                 }
-                else if (resetQue_Type[i] == "TimePowerUp")
+                else if (resetQue_Type[i] == "Time")
                 {
-                    
+                    obj.GetComponent<CircleCollider2D>().enabled = true;
+                    for (int j = 0; j < 5; j++)
+                        obj.transform.GetChild(j).GetComponent<SpriteRenderer>().enabled = true;
                 }
             }
-
-        //Player Postition Reset
-            pc.Restart();
     }
 
     public void Play() {

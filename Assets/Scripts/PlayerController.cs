@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
             float horizontalInput = Input.GetAxis("Horizontal");
             body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
-            if (Input.GetKey(KeyCode.Space) && grounded == true)
+            if (Input.GetKey(KeyCode.Space) && grounded)
                 Jump();
 
             if (Input.GetKeyDown(KeyCode.R))
@@ -68,8 +68,8 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.tag == "TimePickUp")
         {
-           // LevelManager.instance.RemoveObject("TimePickUp", collision.transform.position);
-            //Destroy(collision);
+            LevelManager.instance.RemoveObject("Time", collision.gameObject);
+            LevelManager.instance.timePickUp(5);
         }
     }
 
