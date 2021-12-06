@@ -7886,6 +7886,14 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4014126765759282786, guid: 4d0d535e2a8b0c846b26824ffa20bc4d, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4014126765759282786, guid: 4d0d535e2a8b0c846b26824ffa20bc4d, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7794863569941288560, guid: 4d0d535e2a8b0c846b26824ffa20bc4d, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -7933,6 +7941,10 @@ PrefabInstance:
     - target: {fileID: 7794863569941288562, guid: 4d0d535e2a8b0c846b26824ffa20bc4d, type: 3}
       propertyPath: m_Name
       value: CharacterWIP
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605526550096916183, guid: 4d0d535e2a8b0c846b26824ffa20bc4d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d0d535e2a8b0c846b26824ffa20bc4d, type: 3}
@@ -8017,7 +8029,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 1646559199}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1754130116
 GameObject:
@@ -8390,7 +8402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 10
-  maxJump: 50
+  maxJump: 10
   maxCoinMod: 5
   speed_CostGUI: {fileID: 1817246789}
   jump_CostGUI: {fileID: 68767264}

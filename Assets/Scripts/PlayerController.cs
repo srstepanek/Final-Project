@@ -36,8 +36,11 @@ public class PlayerController : MonoBehaviour
             float horizontalInput = Input.GetAxis("Horizontal");
             body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
-            if (Input.GetKey(KeyCode.Space) && grounded)
+            if (Input.GetKeyDown(KeyCode.W) && body.velocity.y == 0)
+            {
                 Jump();
+                Debug.Log("Jump");
+            }
 
             if (Input.GetKeyDown(KeyCode.R))
             {
@@ -50,10 +53,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Platform")
-        {
-            grounded = true;
-        }
+        //if (collision.gameObject.tag == "Platform")
+        //{
+        //    grounded = true;
+        //    Debug.Log("Update");
+        //}
 
         if (collision.gameObject.tag == "EndPoint")
         {
