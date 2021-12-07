@@ -8,6 +8,7 @@ TagManager:
   - Coins
   - EndPoint
   - TimePickUp
+  - EndDoor
   layers:
   - Default
   - TransparentFX

@@ -42,4 +42,5 @@ public class TimeScript : MonoBehaviour
         timeSinceStart = 0;
         game = true;
     }
+
 }

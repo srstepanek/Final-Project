@@ -9,11 +9,10 @@ public class levelFinish : MonoBehaviour
     bool isWin = false;
     void OnTriggerEnter2D(Collider2D otherObject)
     {
-        if(otherObject.tag == "EndPoint")
+        if(otherObject.tag == "Player")
         {
-            Time.timeScale = 0.0f;
-
             winScreen.SetActive(true);
+         
 
         }
     }
