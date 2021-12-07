@@ -14,6 +14,7 @@ public class levelFinish : MonoBehaviour
             Time.timeScale = 0.0f;
 
             winScreen.SetActive(true);
+
         }
     }
 }
