@@ -15,11 +15,11 @@ C:/Users/bdavey/Documents/GitHub/Final-Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55594
+61404
 Successfully changed project path to: C:/Users/bdavey/Documents/GitHub/Final-Project
 C:/Users/bdavey/Documents/GitHub/Final-Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 173.21 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 67.65 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.16f1 (049d6eca3c44)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/Resources/UnitySubsystems
@@ -36,93 +36,93 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56024
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56384
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007911 seconds.
+Registered in 0.002740 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 175.69 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 55.85 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.593 seconds
+- Completed reload, in  1.425 seconds
 Domain Reload Profiling:
-	ReloadAssembly (4594ms)
-		BeginReloadAssembly (191ms)
+	ReloadAssembly (1425ms)
+		BeginReloadAssembly (62ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (1317ms)
-			LoadAssemblies (185ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (420ms)
+			LoadAssemblies (60ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (442ms)
+			SetupTypeCache (142ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (105ms)
-			SetupLoadedEditorAssemblies (547ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (177ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (176ms)
-				BeforeProcessingInitializeOnLoad (57ms)
-				ProcessInitializeOnLoadAttributes (221ms)
-				ProcessInitializeOnLoadMethodAttributes (77ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (56ms)
+				BeforeProcessingInitializeOnLoad (16ms)
+				ProcessInitializeOnLoadAttributes (74ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (1ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.018734 seconds.
+Registered in 0.006116 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 170.53 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 65.69 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.743 seconds
+- Completed reload, in  1.305 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3746ms)
-		BeginReloadAssembly (451ms)
+	ReloadAssembly (1306ms)
+		BeginReloadAssembly (154ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (12ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (41ms)
-		EndReloadAssembly (3079ms)
-			LoadAssemblies (333ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (1090ms)
+			LoadAssemblies (104ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (894ms)
+			SetupTypeCache (312ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (149ms)
-			SetupLoadedEditorAssemblies (1303ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (505ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (171ms)
-				BeforeProcessingInitializeOnLoad (266ms)
-				ProcessInitializeOnLoadAttributes (786ms)
-				ProcessInitializeOnLoadMethodAttributes (42ms)
-				AfterProcessingInitializeOnLoad (20ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (66ms)
+				BeforeProcessingInitializeOnLoad (126ms)
+				ProcessInitializeOnLoadAttributes (287ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (19ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.24 seconds
-Refreshing native plugins compatible for Editor in 2.80 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3212 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 139.5 MB.
 System memory in use after: 139.7 MB.
 
 Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 3654.
-Total: 14.354500 ms (FindLiveObjects: 0.969300 ms CreateObjectMapping: 0.650100 ms MarkObjects: 12.406200 ms  DeleteObjects: 0.325200 ms)
+Total: 3.638100 ms (FindLiveObjects: 0.307900 ms CreateObjectMapping: 0.135600 ms MarkObjects: 3.122400 ms  DeleteObjects: 0.071000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -136,99 +136,49 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefab/Tree front/Tree.prefab
-  artifactKey: Guid(8dbf0a314169fb04ebb923a837aeb76b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Tree front/Tree.prefab using Guid(8dbf0a314169fb04ebb923a837aeb76b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db980ea4aa25df05796be7e7ff5fcdf4') in 0.496197 seconds 
-  Import took 0.518138 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 27.988183 seconds.
-  path: Assets/materials/Wood Front.mat
-  artifactKey: Guid(1239c8409503f98408fc4b8c73e8b9e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/materials/Wood Front.mat using Guid(1239c8409503f98408fc4b8c73e8b9e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2339191a2f02b77fc0c75c80d1b0d86f') in 0.107085 seconds 
-  Import took 0.120412 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 117.427006 seconds.
-  path: Assets/Prefab/Tree front/Tree.prefab
-  artifactKey: Guid(8dbf0a314169fb04ebb923a837aeb76b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Tree front/Tree.prefab using Guid(8dbf0a314169fb04ebb923a837aeb76b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa19d41686bcdfb44a091b48a465a4eb') in 0.041488 seconds 
-  Import took 0.062107 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000701 seconds.
-  path: Assets/Prefab/Tree front
-  artifactKey: Guid(d980034b2ea00584f988881330d6bc76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Tree front using Guid(d980034b2ea00584f988881330d6bc76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd4442b457de0b220e4e8873feb99136') in 0.009028 seconds 
-  Import took 0.027921 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 95.927243 seconds.
   path: Assets/materials/Black.mat
   artifactKey: Guid(eb2e3666471f5944ba0030c5df7ca5a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/materials/Black.mat using Guid(eb2e3666471f5944ba0030c5df7ca5a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab63999100b16b22bc64458c96aea46c') in 0.035704 seconds 
-  Import took 0.055001 seconds .
+Start importing Assets/materials/Black.mat using Guid(eb2e3666471f5944ba0030c5df7ca5a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1f0f8184288a2c0be17cc51f5147958') in 0.125270 seconds 
+  Import took 0.130111 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016407 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.251 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3252ms)
-		BeginReloadAssembly (341ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (18ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (111ms)
-		EndReloadAssembly (2736ms)
-			LoadAssemblies (291ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (914ms)
-			ReleaseScriptCaches (4ms)
-			RebuildScriptCaches (133ms)
-			SetupLoadedEditorAssemblies (1110ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (219ms)
-				ProcessInitializeOnLoadAttributes (846ms)
-				ProcessInitializeOnLoadMethodAttributes (14ms)
-				AfterProcessingInitializeOnLoad (20ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (29ms)
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.30 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3134 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.3 MB.
-System memory in use after: 135.6 MB.
+Received Import Request.
+  Time since last request: 0.000423 seconds.
+  path: Assets/materials/Wood Front.mat
+  artifactKey: Guid(1239c8409503f98408fc4b8c73e8b9e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/materials/Wood Front.mat using Guid(1239c8409503f98408fc4b8c73e8b9e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45c73583586573015f054b8aa95b66d4') in 0.010607 seconds 
+  Import took 0.015224 seconds .
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3697.
-Total: 6.857400 ms (FindLiveObjects: 0.406100 ms CreateObjectMapping: 0.219600 ms MarkObjects: 6.183100 ms  DeleteObjects: 0.047000 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 14.364613 seconds.
+  path: Assets/Prefab/Tree front/Tree.prefab
+  artifactKey: Guid(8dbf0a314169fb04ebb923a837aeb76b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tree front/Tree.prefab using Guid(8dbf0a314169fb04ebb923a837aeb76b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c4749a6aca6a103c420f78e51a31e6a') in 0.036762 seconds 
+  Import took 0.042118 seconds .
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 274.705850 seconds.
+  path: Assets/Prefab/Tree front/Tree.prefab
+  artifactKey: Guid(8dbf0a314169fb04ebb923a837aeb76b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tree front/Tree.prefab using Guid(8dbf0a314169fb04ebb923a837aeb76b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f48cffac8651dee893846b0ce20690be') in 0.012022 seconds 
+  Import took 0.018139 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 250.573748 seconds.
+  path: Assets/Prefab/Tree front/Tree.prefab
+  artifactKey: Guid(8dbf0a314169fb04ebb923a837aeb76b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Tree front/Tree.prefab using Guid(8dbf0a314169fb04ebb923a837aeb76b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '383c71dac0605fd0b7f885dcab323a7b') in 0.012826 seconds 
+  Import took 0.018088 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5915.906416 seconds.
+  path: Assets/Grass Sprite.png
+  artifactKey: Guid(09d0999ec93094d4f8f4b8d46eff71b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Grass Sprite.png using Guid(09d0999ec93094d4f8f4b8d46eff71b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e1b4f22824ec43eed8ee449e7becf88') in 0.140679 seconds 
+  Import took 0.188670 seconds .
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
